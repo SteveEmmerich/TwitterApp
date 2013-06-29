@@ -80,7 +80,7 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
     [super viewDidLoad];
     [self.refreshControl addTarget:self action:@selector(refreshSearchResults) forControlEvents:UIControlEventValueChanged];
     self.title = self.query;
-    NSLog(self.title);
+  //  NSLog(self.title);
     [self loadQuery];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -149,14 +149,14 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
     if ([segue.identifier isEqualToString:@"TweetPush"])
     {
         UITextView *textView = sender;
-        NSLog(textView.text);
+      //  NSLog(textView.text);
         TweetViewController *viewController = segue.destinationViewController;
         NSString* temp = [NSString stringWithFormat:@"%@", textView.text];
-        NSLog(temp);
+        //NSLog(temp);
         viewController.tweet = temp;
-        NSLog(viewController.tweet);
+       // NSLog(viewController.tweet);
     }
-    NSLog(segue.identifier);
+    //NSLog(segue.identifier);
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

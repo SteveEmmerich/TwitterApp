@@ -44,7 +44,7 @@
         UITextField *textField = sender;
         SearchViewController *viewController = segue.destinationViewController;
         viewController.query = [NSString stringWithFormat:@"%@", textField.text];
-        NSLog(viewController.query);
+       // NSLog(viewController.query);
     }
 }
 
